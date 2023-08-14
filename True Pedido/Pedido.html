@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- 
+Código escrito por MTHS1901 em um tutorial no YouTube
+Confira: https://www.youtube.com/watch?v=zxxB9SFh9p4
+Este arquivo já esta pronto e você pode mandar para quem quiser
+-->
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Namora comigo?</title>
+    <link rel="stylesheet"  href="Pedido.css"/>
+  </head>
+
+  <body>
+    <div class="container">
+    <div class="content">
+    <div id="question">
+      <h2>Quer fazer +1 mês de namoro comigo?</h2>
+    </div>
+
+    <div id="conteudo">
+      
+      <div></div>
+        <button
+          style="position: fixed; display: block"
+          class="btn"
+          onclick="sim()"
+        >
+          SIM
+        </button>
+        <button
+          class="btn"
+          onclick="desvia(this)"
+          onmouseover="desvia(this)"
+          style="position: absolute"
+        >
+          NÃO
+        </button>
+      
+    </div>
+  </body>
+
+  <script>
+    function sim() {
+      alert("Vencemo dnv krl!!! :))))")
+      // redireciona para um URL após clicar no SIM
+      location.href = "https://music.youtube.com/watch?v=54LgyqSPfsQ&list=OLAK5uy_lno9TRSHksq_rJEBKvGHDZ5jDvjpkVVew"
+    
+    }
+
+    function desvia(btn) {
+      // btn declarado na função
+      btn.style.position = "absolute"
+      btn.style.bottom = geraPosicao(30, 100)
+      btn.style.left = geraPosicao(30, 100)
+      console.log("opa, desviei...")
+    }
+
+    function geraPosicao(min, max) {
+      return Math.random() * (max - min) + min + "%"
+    }
+
+    /* Apague se quiser, isso apenas escreve MTHS1901 e o link para o tutorial no console */
+    const o = "MTHS1901",
+      e = 90,
+      l = "bold"
+    console.log(
+      `%c${o}`,
+      "font-size: 90px; font-weight: bold; background: linear-gradient(90deg, red, yellow);"
+    ),
+      console.log("Tutorial: https://www.youtube.com/watch?v=zxxB9SFh9p4")
+  </script>
+</html>
